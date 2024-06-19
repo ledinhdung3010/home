@@ -1,5 +1,12 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 .home .header{
     background: linear-gradient(-180deg, #f53d2d, #f63);
+    width: 100%;
 }
 .header .top-header{
     padding: 10px 0;
@@ -76,6 +83,7 @@
 .home .content{
     background-color: #F5F5F5;
     display: grid;
+   
     
 }
 
@@ -92,21 +100,29 @@
 .container-directory .header-directory .fa-angle-right{
     padding: 2px 5px;
 }
+
 .container-directory .content-directory{
     border-bottom: 1px solid #ccc;
 }
+.container-directory .content-directory .view_all .btn-toggle{
+    text-align: center;
+    padding: 10px 0;
+    font-weight: bold;
+    font-size: 20px;
+}
 .container-directory .content-directory .item-directory{
-
+    
 }
 .container-directory .content-directory .list-directory{
-    padding: 10px;
+    padding: 10px;    
 }
 .content-directory .item-directory img{
-    width: 80%;
+    width: 100%;
     border-radius: 50%;
 }
 .content-directory .item-directory .text-item__directory{
     padding: 10px 15px;
+    text-align: center;
 }
 .home .content .banner{
     padding: 20px 10px;
@@ -135,7 +151,12 @@
  }
 
 
-
+ .container-flash__sale .view_all .btn-toggle{
+    text-align: center;
+    padding: 10px 0;
+    font-weight: bold;
+    font-size: 20px;
+}
 .container-flash__sale .list-product__sale .inf-product{
     border:1px solid rgba(0, 0, 0, .09);
     margin-bottom: 10px;
@@ -154,11 +175,7 @@
     text-decoration: none;
     color: #000;
     font-size: 16px;
-    display: inline-block;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: block;
+
     
 }
 .inf-product .text-product .price{
@@ -202,7 +219,12 @@
     padding: 2px 5px;
 }
 
-
+.container-favorite__collection .view_all .btn-toggle{
+    text-align: center;
+    padding: 10px 0;
+    font-weight: bold;
+    font-size: 20px;
+}
 .container-favorite__collection .list-product__favorite .inf-product{
     border:1px solid rgba(0, 0, 0, .09);
     margin-bottom: 10px;
@@ -224,11 +246,7 @@
     text-decoration: none;
     color: #000;
     font-size: 16px;
-    display: inline-block;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: block;
+   
     
 }
 
@@ -236,6 +254,12 @@
     background-color: #fff;
     margin-top: 30px;
     padding: 20px 0;
+}
+.container-trend__buy .view_all .btn-toggle{
+    text-align: center;
+    padding: 10px 0;
+    font-weight: bold;
+    font-size: 20px;
 }
 .home .content .container-trend__buy .header-trend__buy{
     padding: 20px;
@@ -304,6 +328,7 @@
 .container-latest__product .list-latest__product  .inf-product:hover{
     border:1px solid rgba(238, 77, 45);
 }
+
 .container-latest__product .list-latest__product{
     padding: 10px;
 }
@@ -336,15 +361,79 @@
     background-color:rgb(238, 77, 45);
     color: #fff;
 }
+.content .btn-group{
+    display: none;
+}
 
 
 @media (max-width: 768px) {
-    html{
-        width: 100%;
-    }
+    
     .home .header .top-header{
         display: none;
     }
-
+    .center-header .input-search .icon-search{
+        padding: 8px 10px;
+    }
+     .content-directory .item-directory .text-item__directory{
+            padding: 10px 0;
+    }
+    .content .banner .col-4{
+       padding: 2px;
+    }
+    .list-product__sale  .inf-product .text-product .name-product{
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: block;
+        max-width: 200px;
+        white-space: nowrap;
+    }
+    .list-product__trend .inf-product .text-product .name-product{
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: block;
+        max-width: 200px;
+        white-space: nowrap;
+    }
+    .list-latest__product .inf-product .text-product .name-product{
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: block;
+        max-width: 200px;
+        white-space: nowrap;
+    }
+    .page{
+        margin-bottom: 50px;
+    }
+    .page .list-page .btn {
+        padding: 10px 10px;
+    }
+    .content .btn-group{
+        display: block ;
+    }
+    .content .btn-group{
+        position: fixed;
+        bottom: 0;
+        background-color: #fff;
+        width: 100%;
+        z-index: 100;
+        padding: 10px 0;
+    }
+    
+    .content .btn-group .icon-btn{
+        padding: 0 20px;
+        color: #f53d2d;
+    }
+    .content .btn-group .text-btn{
+        white-space: nowrap;
+        margin-bottom: 0 !important;
+        font-size: 14px;
+    }
+    .content .btn-group .col-3:hover{
+        background-color: #ee9790;
+    }
+   
+    
+    
+   
 
 }
